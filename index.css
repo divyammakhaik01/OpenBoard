@@ -1,0 +1,157 @@
+.options-container {
+  background-color: aquamarine;
+  height: 5rem;
+  width: 4rem;
+  top: 2rem;
+  left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+/* Tools */
+.tools {
+  background-color: #cfc2b48f;
+  height: 5rem;
+  width: 50rem;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 2rem;
+  left: 20rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.tools > * {
+  display: block;
+  width: 4rem;
+}
+
+.animate-tools {
+  animation: animate-tools;
+  animation-duration: 1s;
+}
+
+@keyframes animate-tools {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Pencil-Colors */
+
+.pencil-color {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  background-color: rgb(204, 47, 19);
+  border-radius: 50%;
+}
+
+#pencil-red {
+  background-color: red;
+}
+#pencil-black {
+  background-color: black;
+}
+#pencil-yellow {
+  background-color: yellow;
+}
+
+/* Pencil */
+.pencil-tools-container {
+  height: 3rem;
+  width: 11rem;
+  position: absolute;
+  display: block; /* by defalt  */
+  left: 21rem;
+  top: 8rem;
+  padding-left: 1rem;
+  border-radius: 0%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background-color: rgb(248, 243, 234);
+}
+
+/* Eraser */
+
+.eraser-tools-container {
+  height: 2rem;
+  width: 10rem;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 36rem;
+  top: 8rem;
+  /* padding-left: 1rem; */
+  border-radius: 0%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background-color: rgb(248, 243, 234);
+}
+
+/* Notes */
+
+.notes_container {
+  height: 15rem;
+  width: 15rem;
+  /* background-color: aquamarine; */
+  position: absolute;
+  left: 15rem;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
+}
+
+.notes-header {
+  height: 2rem;
+  width: inherit;
+  background-color: rgb(216, 216, 208);
+  display: flex;
+  flex-direction: row-reverse;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.notes-minimise {
+  margin-right: 1rem;
+  color: blue;
+}
+
+.notes-body {
+  height: calc(100% - 2rem);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.notes-remove {
+  margin-top: calc(2rem - 1.6rem);
+  color: red;
+  margin-right: calc(2rem - 1.6rem);
+}
+#notes-textarea {
+  height: 97%;
+  width: 98%;
+  outline: none;
+  border: none;
+  resize: none;
+}
+
+/* -----------------Drag-Notes---------------- */
+.note-hide {
+  display: none;
+}
+
+.drag-over {
+  border: dashed 3px black;
+}
+
+/* --------------------------------------------- */
+
+/* Img */
+
+img {
+  height: 100%;
+  width: 100%;
+}
