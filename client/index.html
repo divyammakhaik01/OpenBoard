@@ -36,10 +36,12 @@
 
         </div>
 
+        <!-- Pencil container -->
+
         <div style="display: none;" class="pencil-tools-container">
 
             <div class="pencil-width-adjust">
-                <input type="range" name="pencil-range" id="pencil-range" value="10">
+                <input type="range" name="pencil-range" id="pencil-range" value="5">
             </div>
 
             <div class="pencil-color-adjust">
@@ -50,10 +52,12 @@
 
         </div>
 
+        <!-- Eraser container  -->
+
         <div style="display: none;" class="eraser-tools-container">
 
             <div class="eraser-width-adjust">
-                <input type="range" name="eraser-range" id="eraser-range" value="10">
+                <input type="range" name="eraser-range" id="eraser-range" value="5">
             </div>
 
         </div>
@@ -78,20 +82,31 @@
                 <textarea name="notes" id="notes-textarea"></textarea>
             </div>
         </div>
- -->
+        -->
+    </div>
+
+    <canvas>
 
         <div class="target_spot">
-
         </div>
 
-        <canvas>
+    </canvas>
 
-        </canvas>
+    <!-----------------------------------------------------  Javascript --------------------------------------------------->
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"
+        integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H"
+        crossorigin="anonymous"></script>
+    <script>
+        let socket = io.connect('http://localhost:5500')
+        console.log("connected with socket", socket.id);
+
+    </script>
+
+    <script src="index.js"></script>
+
+    <script src="canvasApi.js"></script>
 
 
-        <!--  Javascript -->
-        <script src="index.js"></script>
-        <script src="canvasApi.js"></script>
 </body>
 
 </html>

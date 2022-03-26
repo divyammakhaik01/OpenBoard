@@ -19,7 +19,7 @@ const redo = document.querySelector(".redo");
 const download = document.querySelector(".download");
 const upload = document.querySelector(".upload");
 const notes = document.querySelector(".notes");
-
+const canvas1 = document.querySelector("canvas");
 //----------------------------------------- States-------------------------------------------------------
 
 let pencil_state = true;
@@ -146,6 +146,8 @@ const create_notes = () => {
   `;
 
   document.body.appendChild(new_note);
+  // canvas1.append(new_note);
+
   dragAndDrop(new_note);
   return new_note;
 };
@@ -169,6 +171,7 @@ const create_notes_img = (createURL) => {
           </div>
   `;
   document.body.appendChild(image);
+  // canvas1.appendChild(image);
   dragAndDrop(image);
   return image;
 };
@@ -189,6 +192,7 @@ const minimise = (new_note) => {
     }
   });
 };
+
 /*------------------------------------------------------- remove tab------------------------------------------ */
 
 const remove = (note_name) => {
@@ -198,3 +202,5 @@ const remove = (note_name) => {
     note_name.remove();
   });
 };
+
+//
